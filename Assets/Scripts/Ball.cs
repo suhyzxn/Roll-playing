@@ -7,9 +7,14 @@ public class Ball : MonoBehaviour
     bool jumpPressed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         rigid = GetComponent<Rigidbody>();
+    }
+
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -29,5 +34,13 @@ public class Ball : MonoBehaviour
         }
         Vector3 vec = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         rigid.AddForce(vec, ForceMode.Impulse);
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.name == "jump block")
+        {
+            rigid.AddForce(Vector3.up * 2, ForceMode.Impulse);
+        }
     }
 }
