@@ -1,4 +1,3 @@
-using Mono.Cecil;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -45,7 +44,7 @@ public class Ball : MonoBehaviour
         {
             jumpPressed = false;
         }
-        if (collision.gameObject.CompareTag("JumpBlock"))
+        else if (collision.gameObject.CompareTag("JumpBlock"))
         {
             Vector3 v = rigid.linearVelocity;
             v.y = 30f;
