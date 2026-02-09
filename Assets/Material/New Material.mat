@@ -40,19 +40,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BackTex:
-        m_Texture: {fileID: 2800000, guid: 47d855c9e7a0c594d87768f974b942c3, type: 3}
+        m_Texture: {fileID: 2800000, guid: c4a57322a5cacfe4585bdb27683e3815, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DownTex:
-        m_Texture: {fileID: 2800000, guid: d94b2502c5a497a43865c60689da9471, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8984c66782098c24bb8ca7e9b8ffc558, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FrontTex:
-        m_Texture: {fileID: 2800000, guid: c3de0a8cebb3835438ab7191445d5b24, type: 3}
+        m_Texture: {fileID: 2800000, guid: d4814dc6ba7729a4b876dae4bfc19385, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LeftTex:
-        m_Texture: {fileID: 2800000, guid: d0bf805d216f9e841843e39d87565875, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9f8a5695d8671234f992c82b06db8a97, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RightTex:
-        m_Texture: {fileID: 2800000, guid: b85869df11f36ef4fbddd8412e8b6100, type: 3}
+        m_Texture: {fileID: 2800000, guid: cc5b8243ff2bb064cb97413051c3875d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tex:
@@ -68,13 +68,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _UpTex:
-        m_Texture: {fileID: 2800000, guid: 97dad57068bb6b84ea31c98decf92d05, type: 3}
+        m_Texture: {fileID: 2800000, guid: fb1687cd1151e8f4791e805220b8377d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _AtmosphereThickness: 1
-    - _Exposure: 1
+    - _Exposure: 0.5
     - _ImageType: 0
     - _Layout: 0
     - _Mapping: 1
@@ -86,6 +86,6 @@ Material:
     m_Colors:
     - _GroundColor: {r: 0.36899996, g: 0.34899998, b: 0.34099993, a: 1}
     - _SkyTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
