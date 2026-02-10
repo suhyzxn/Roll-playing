@@ -5,16 +5,12 @@ public class Ball : MonoBehaviour
 {
     Rigidbody rigid;
     bool jumpPressed = false;
+    MoveDirection MoveDir;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         rigid = GetComponent<Rigidbody>();
-    }
-
-    void Start()
-    {
-        
+        MoveDir = FindFirstObjectByType<MoveDirection>();
     }
 
     void isPlaying()
@@ -50,8 +46,7 @@ public class Ball : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Vector3 vec = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        rigid.AddForce(vec * 25f, ForceMode.Force);
+        rigid.AddForce(MoveDir.dir * 25f, ForceMode.Acceleration);
     }
 
     void Jump()
