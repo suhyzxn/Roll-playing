@@ -1,8 +1,15 @@
 using UnityEngine;
 
+public enum GameState
+{
+    playing,
+    Dead
+}
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public GameState gameState;
 
     void Awake()
     {
@@ -15,13 +22,14 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        gameState = GameState.playing;
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            
+            gameState = GameState.Dead;
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created

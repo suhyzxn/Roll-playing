@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -16,12 +17,35 @@ public class Ball : MonoBehaviour
         
     }
 
+    void isPlaying()
+    {
+        GameManager.instance.gameState = GameState.playing;
+        rigid.isKinematic = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Jump") && !jumpPressed)
         {
             Jump();
+        }
+
+        if (GameManager.instance.gameState == GameState.Dead)
+        {
+            transform.rotation = quaternion.Euler(0,0,0);
+            rigid.isKinematic = true;
+            
+            if (transform.position.z <= 250)
+            {
+                transform.position = new Vector3(-38.86f, 125f, 5.77f);
+                isPlaying();
+            }
+            else
+            {
+                transform.position = new Vector3(-38.86f, 160f, 250f);
+                isPlaying();
+            }
         }
     }
     void FixedUpdate()
