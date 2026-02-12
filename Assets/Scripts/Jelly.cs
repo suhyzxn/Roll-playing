@@ -5,6 +5,7 @@ public class Jelly : MonoBehaviour
     AudioSource JellyAudio;
     Collider col;
     Renderer render;
+    float rotateSpeed = 20f;
     
     void Awake()
     {
@@ -12,6 +13,12 @@ public class Jelly : MonoBehaviour
         col = GetComponent<Collider>();
         render = GetComponent<Renderer>();
     }
+
+    void Update()
+    {
+        transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime, Space.World);
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
