@@ -4,6 +4,7 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
     public int score {get; private set;}
+    public event System.Action<int> OnScoreChanged;
 
     void Awake()
     {
@@ -20,5 +21,6 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int point)
     {
         score += point;
+        OnScoreChanged?.Invoke(score);
     }
 }
