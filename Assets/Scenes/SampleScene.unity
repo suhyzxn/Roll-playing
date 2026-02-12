@@ -1628,7 +1628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080904110746807582, guid: 654d7d7286bcf9e42b92066946511a57, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8080904110746807582, guid: 654d7d7286bcf9e42b92066946511a57, type: 3}
       propertyPath: m_LightProbeUsage
@@ -1640,7 +1640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8706465885804696897, guid: 654d7d7286bcf9e42b92066946511a57, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8706465885804696897, guid: 654d7d7286bcf9e42b92066946511a57, type: 3}
       propertyPath: m_StaticEditorFlags
