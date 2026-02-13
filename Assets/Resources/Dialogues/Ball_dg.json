@@ -1,0 +1,31 @@
+{
+    "dialogues": [
+        {
+            "id": "intro",
+            "autoPlay": true,
+            "lines": [
+                {"speaker": "주인공", "text": "아, 오랜만에 공 굴리기 \n게임이나 해볼까."},
+                {"speaker": "주인공", "text": "공아 잘 있었니? \n너는 항상 열심히 구르는구나."},
+                {"speaker": "주인공", "text": "난 가끔 삶이 너무 \n단조롭다고 느껴져. \n너는 이런 스릴도 느끼고 좋겠다."},
+                {"speaker": "공", "text": "구르고만 있는 거 나도 지겨워."},
+                {"speaker": "주인공", "text": "뭐야, \n이거 스토리도 있었나?"}
+            ]
+        },
+        {
+            "id": "need_score",
+            "autoPlay": true,
+            "lines": [
+                {"speaker": "주인공", "text": "길이 없네."},
+                {"speaker":"공", "text": "단추를 다 모아줘."}
+            ]
+        },
+        {
+            "id": "enough_score",
+            "autoPlay":true,
+            "lines": [
+                {"speaker": "주인공", "text": "길이 없네."},
+                {"speaker":"공", "text": "나를 믿고 앞으로 뛰어봐."}
+            ]
+        }
+    ]   
+}

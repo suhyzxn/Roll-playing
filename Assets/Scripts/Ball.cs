@@ -6,11 +6,17 @@ public class Ball : MonoBehaviour
     Rigidbody rigid;
     bool jumpPressed = false;
     MoveDirection MoveDir;
+    bool canMove = true;
 
     void Awake()
     {
         rigid = GetComponent<Rigidbody>();
         MoveDir = FindFirstObjectByType<MoveDirection>();
+    }
+
+    void Start()
+    {
+        DialogueManager.Instance.PlayFromJson("Ball_dg", "intro");
     }
 
     void isPlaying()
@@ -22,6 +28,9 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!canMove)
+            return;
+
         if (Input.GetButtonDown("Jump") && !jumpPressed)
         {
             Jump();
@@ -46,6 +55,8 @@ public class Ball : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (!canMove)
+            return;
         rigid.AddForce(MoveDir.dir * 25f, ForceMode.Acceleration);
     }
 
@@ -68,6 +79,16 @@ public class Ball : MonoBehaviour
             Vector3 v = rigid.linearVelocity;
             v.y = 30f;
             rigid.linearVelocity = v;
+        }
+    }
+
+    public void SetControl(bool value)
+    {
+        canMove = value;
+        if (!value)
+        {
+            rigid.linearVelocity = Vector3.zero;
+            rigid.angularVelocity = Vector3.zero;
         }
     }
 }
